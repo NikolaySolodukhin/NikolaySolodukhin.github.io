@@ -292,11 +292,9 @@ p.nominalBounds = null;
 		video.muted = true;
 		video.volume = 0.6;
 		video.playsinline = true;
-		video.type="video/mp4";
-		video.controls = false;
-		//video.inline = true;
+		video.inline = true;
 		//video.autoplay = true;
-		video.src = '444x250_15sec.mp4';
+		//video.src = '444x250_15sec.mp4';
 		
 		var videoBM = new createjs.Bitmap(video);
 		this.video.addChild(videoBM);
@@ -368,17 +366,8 @@ p.nominalBounds = null;
 		// button handlers
 		function bigPlayBtnClickHandler()
 		{
-			var promise = video.play();
-
-			if (promise !== undefined) {
-
-				promise.then(_ => {
-					big_play_btn.visible = false;
-				}).catch(error => {
-					big_play_btn.visible = true;
-				});
-
-			}
+			big_play_btn.visible = false;
+			video.play();	
 			videoVolumeChangeHandler();
 			video.addEventListener('play', videoPlayHandler);  
 			video.addEventListener('pause', videoPauseHandler); 
@@ -413,7 +402,7 @@ p.nominalBounds = null;
 		}
 		
 		function iOS() {
-
+		
 		  var iDevices = [
 		    'iPad Simulator',
 		    'iPhone Simulator',
@@ -422,23 +411,21 @@ p.nominalBounds = null;
 		    'iPhone',
 		    'iPod'
 		  ];
-
+		
 		  if (!!navigator.platform) {
 		    while (iDevices.length) {
 		      if (navigator.platform === iDevices.pop()){ return true; }
 		    }
 		  }
-
+		
 		  return false;
 		}
 		
 		if (iOS()) {
-			video.src = '444x250_15sec.mp4';
 			big_play_btn.visible = true;
 		} else {
 			videoPlayer.play('444x250_15sec.mp4');
 		}
-		// videoPlayer.play('444x250_15sec.mp4');
 	}
 
 	// actions tween:

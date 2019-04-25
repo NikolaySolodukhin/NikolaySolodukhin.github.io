@@ -13,7 +13,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>index</title>
-<script src="dist/iphone-inline-video.min.js"></script>
 <script>
     var clickurls = [%clickurls%];
     function click(n){
@@ -58,7 +57,7 @@ function handleComplete(evt,comp) {
 		stage.addChild(exportRoot);
 		createjs.Ticker.setFPS(lib.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage);
-	}	   
+	} 
 	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
