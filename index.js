@@ -291,7 +291,7 @@ p.nominalBounds = null;
 		
 		video.muted = true;
 		video.volume = 0.6;
-		// video.playsinline = true;
+		video.playsinline = true;
 		video.type="video/mp4";
 		//video.inline = true;
 		//video.autoplay = true;
@@ -374,7 +374,7 @@ p.nominalBounds = null;
 				promise.then(_ => {
 					big_play_btn.visible = false;
 				}).catch(error => {
-					play_btn.visible = true;
+					big_play_btn.visible = true;
 				});
 
 			}
