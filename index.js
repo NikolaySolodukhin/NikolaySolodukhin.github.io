@@ -291,7 +291,7 @@ p.nominalBounds = null;
 		
 		video.muted = true;
 		video.volume = 0.6;
-		video.playsinline = true;
+		// video.playsinline = true;
 		video.type="video/mp4";
 		//video.inline = true;
 		//video.autoplay = true;
@@ -368,7 +368,7 @@ p.nominalBounds = null;
 		function bigPlayBtnClickHandler()
 		{
 			big_play_btn.visible = false;
-			var a = video.play();	
+			var a = video.play();
 			console.log(a);
 			videoVolumeChangeHandler();
 			video.addEventListener('play', videoPlayHandler);  
