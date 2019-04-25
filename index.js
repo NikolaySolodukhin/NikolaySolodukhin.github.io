@@ -293,8 +293,9 @@ p.nominalBounds = null;
 		video.volume = 0.6;
 		video.playsinline = true;
 		video.type="video/mp4";
-		//video.inline = true;
-		//video.autoplay = true;
+		video.inline = true;
+		video.autoplay = true;
+		video.loop = true;
 		//video.src = '444x250_15sec.mp4';
 		
 		var videoBM = new createjs.Bitmap(video);
