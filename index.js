@@ -411,8 +411,8 @@ p.nominalBounds = null;
 			//video.removeEventListener('pause', videoPauseHandler);
 		}
 		
-		/*function iOS() {
-		
+		function iOS() {
+
 		  var iDevices = [
 		    'iPad Simulator',
 		    'iPhone Simulator',
@@ -421,7 +421,7 @@ p.nominalBounds = null;
 		    'iPhone',
 		    'iPod'
 		  ];
-		
+
 		  if (!!navigator.platform) {
 		    while (iDevices.length) {
 		      if (navigator.platform === iDevices.pop()){ return true; }
@@ -429,7 +429,7 @@ p.nominalBounds = null;
 		  }
 		
 		  return false;
-		}*/
+		}
 		
 		if (iOS()) {
 			video.src = '444x250_15sec.mp4';
