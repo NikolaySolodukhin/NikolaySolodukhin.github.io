@@ -373,9 +373,8 @@ p.nominalBounds = null;
 
 				promise.then(_ => {
 					big_play_btn.visible = false;
-					console.log(video);
 				}).catch(error => {
-					big_play_btn.visible = true;
+					play_btn.visible = true;
 				});
 
 			}
