@@ -310,7 +310,7 @@ p.nominalBounds = null;
 		startCondition();
 		
 		play_btn.addEventListener('click', playBtnClickHandler);
-		bigPlayBtnaddEventListener('click', bigPlayBtnClickHandler);
+		big_play_btn.addEventListener('click', bigPlayBtnClickHandler);
 		pause_btn.addEventListener('click', pauseBtnClickHandler);
 		sound_on.addEventListener('click', soundOnClickHandler);
 		sound_off.addEventListener('click', soundOffClickHandler);
@@ -367,6 +367,7 @@ p.nominalBounds = null;
 		// button handlers
 		function bigPlayBtnClickHandler()
 		{
+			big_play_btn.visible = false;
 			var promise = video.play();
 
 			if (promise !== undefined) {
