@@ -424,7 +424,6 @@ p.nominalBounds = null;
 		if (iOS()) {
 			big_play_btn.visible = true;
 			video.src = '444x250_15sec.mp4';
-			bigPlayBtnClickHandler();
 		} else {
 			videoPlayer.play('444x250_15sec.mp4');
 		}
