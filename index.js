@@ -296,7 +296,7 @@ p.nominalBounds = null;
 		video.controls = false;
 		//video.inline = true;
 		//video.autoplay = true;
-		//video.src = '444x250_15sec.mp4';
+		video.src = '444x250_15sec.mp4';
 		
 		var videoBM = new createjs.Bitmap(video);
 		this.video.addChild(videoBM);
@@ -435,7 +435,6 @@ p.nominalBounds = null;
 		if (iOS()) {
 			video.src = '444x250_15sec.mp4';
 			big_play_btn.visible = true;
-			document.exitFullscreen();
 		} else {
 			videoPlayer.play('444x250_15sec.mp4');
 		}
