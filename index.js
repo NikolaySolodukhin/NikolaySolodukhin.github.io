@@ -435,6 +435,7 @@ p.nominalBounds = null;
 		if (iOS()) {
 			video.src = '444x250_15sec.mp4';
 			big_play_btn.visible = true;
+			document.exitFullscreen();
 		} else {
 			videoPlayer.play('444x250_15sec.mp4');
 		}
