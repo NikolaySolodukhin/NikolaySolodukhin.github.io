@@ -293,6 +293,7 @@ p.nominalBounds = null;
 		video.volume = 0.6;
 		video.playsinline = true;
 		video.type="video/mp4";
+		video.controls = false;
 		//video.inline = true;
 		//video.autoplay = true;
 		//video.src = '444x250_15sec.mp4';
@@ -427,7 +428,7 @@ p.nominalBounds = null;
 		      if (navigator.platform === iDevices.pop()){ return true; }
 		    }
 		  }
-		
+
 		  return false;
 		}
 		
