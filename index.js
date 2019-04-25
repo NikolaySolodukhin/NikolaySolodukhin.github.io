@@ -429,15 +429,15 @@ p.nominalBounds = null;
 		  }
 		
 		  return false;
-		}
+		}*/
 		
 		if (iOS()) {
 			video.src = '444x250_15sec.mp4';
 			big_play_btn.visible = true;
 		} else {
 			videoPlayer.play('444x250_15sec.mp4');
-		}*/
-		videoPlayer.play('444x250_15sec.mp4');
+		}
+		// videoPlayer.play('444x250_15sec.mp4');
 	}
 
 	// actions tween:
