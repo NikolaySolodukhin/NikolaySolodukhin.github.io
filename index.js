@@ -310,7 +310,7 @@ p.nominalBounds = null;
 		startCondition();
 		
 		play_btn.addEventListener('click', playBtnClickHandler);
-		big_play_btn.addEventListener('click', bigPlayBtnClickHandler);
+		bigPlayBtnaddEventListener('click', bigPlayBtnClickHandler);
 		pause_btn.addEventListener('click', pauseBtnClickHandler);
 		sound_on.addEventListener('click', soundOnClickHandler);
 		sound_off.addEventListener('click', soundOffClickHandler);
@@ -367,9 +367,17 @@ p.nominalBounds = null;
 		// button handlers
 		function bigPlayBtnClickHandler()
 		{
-			big_play_btn.visible = false;
-			var a = video.play();
-			console.log(a);
+			var promise = video.play();
+
+			if (promise !== undefined) {
+
+				promise.then(_ => {
+					big_play_btn.visible = false;
+				}).catch(error => {
+					big_play_btn.visible = true;
+				});
+
+			}
 			videoVolumeChangeHandler();
 			video.addEventListener('play', videoPlayHandler);  
 			video.addEventListener('pause', videoPauseHandler); 
