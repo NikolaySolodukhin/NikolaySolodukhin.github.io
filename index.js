@@ -367,13 +367,13 @@ p.nominalBounds = null;
 		// button handlers
 		function bigPlayBtnClickHandler()
 		{
-			big_play_btn.visible = false;
 			var promise = video.play();
 
 			if (promise !== undefined) {
 
 				promise.then(_ => {
 					big_play_btn.visible = false;
+					console.log(video);
 				}).catch(error => {
 					big_play_btn.visible = true;
 				});
